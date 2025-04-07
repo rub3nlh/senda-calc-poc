@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('https://assets.website-files.com/63f38a8c92397a024593a624/63f38a8c92397a3b0893a64f_GeneralSans-Variable.ttf') format('truetype');
+  font-weight: 200 700;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    font-family: 'GeneralSans', system-ui, sans-serif;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.bg-senda-gradient {
+  background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  position: relative;
+}
+
+.image-grid img {
+  border-radius: 1rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.qr-code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
